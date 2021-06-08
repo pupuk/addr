@@ -111,6 +111,7 @@ func Parse(address *Address) *Address {
 	rArr := append(rReg.FindAllString(address.Address, -1), cArr...)
 
 	// 处理区县级
+I:
 	for _, r := range rArr {
 		if r1, ok := areaMap.RegionByName[r]; ok && len(r1) == 1 {
 			address.Region = r1[0].Name
