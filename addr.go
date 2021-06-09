@@ -21,7 +21,7 @@ type Address struct {
 }
 
 // FilterWord 需要过滤掉收货地址中的常用说明字符，排除干扰词
-var FilterWord = []string{"身份证号", "地址", "收货人", "收件人", "收货", "邮编", "电话", "身份证号码", "身份证号", "身份证", "：", ":", "；", ";", "，", ",", "。", "."}
+var FilterWord = []string{"身份证号", "地址", "收货人", "收件人", "收货", "邮编", "电话", "手机", "手机号", "手机号码", "身份证号码", "身份证号", "身份证", "：", ":", "；", ";", "，", ",", "。", "."}
 
 // Decompose 分离手机号(座机)，身份证号，姓名，地址等信息
 func Decompose(info *Address, str string) *Address {
@@ -87,9 +87,10 @@ func Smart(str string) *Address {
 	var info Address
 	info = *Decompose(&info, str)
 	Parse(&info)
-	if info.Region != "" {
+	if info.Region != "" && strings.Contains(info.Address, info.Region) {
 		info.Street = info.Address[strings.LastIndex(info.Address, info.Region)+len(info.Region):]
-	} else {
+	}
+	if info.City != "" && strings.Contains(info.Address, info.City) {
 		info.Street = info.Address[strings.LastIndex(info.Address, info.City)+len(info.City):]
 	}
 
