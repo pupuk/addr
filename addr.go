@@ -87,9 +87,10 @@ func Smart(str string) *Address {
 	var info Address
 	info = *Decompose(&info, str)
 	Parse(&info)
-	if info.Region != "" {
+	if info.Region != "" && strings.Contains(info.Address, info.Region) {
 		info.Street = info.Address[strings.LastIndex(info.Address, info.Region)+len(info.Region):]
-	} else {
+	}
+	if info.City != "" && strings.Contains(info.Address, info.City) {
 		info.Street = info.Address[strings.LastIndex(info.Address, info.City)+len(info.City):]
 	}
 
