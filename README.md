@@ -70,6 +70,31 @@ func main() {
 
 ```
 
+- 构建HTTP服务端DEMO（使用fiber，gin类似，几行代码即可构建一个解析服务）
+```go
+package main
+
+import (
+	"github.com/gofiber/fiber/v2"
+	"github.com/pupuk/addr"
+)
+
+func main() {
+	app := fiber.New()
+
+	app.Get("/", func(c *fiber.Ctx) error {
+		parse := addr.Smart(c.Query("addr"))
+		return c.JSON(parse)
+	})
+
+	app.Listen(":3000")
+}
+
+```
+HTTP请求结果
+![image](https://user-images.githubusercontent.com/7934974/184922637-9d909cc2-fa47-45aa-8297-0ea69495f215.png)
+
+
 ### 反馈 &改进
 #### Issue
 如果有什么问题或建议，或者发现有不能识别，或者识别错误的地址，
