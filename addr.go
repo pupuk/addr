@@ -35,8 +35,8 @@ func Decompose(info *Address, str string) *Address {
 	str = strings.TrimSpace(reg.ReplaceAllString(str, " "))
 
 	//3. 去除手机号码中的短横线 如0136-3333-6666 主要针对苹果手机
-	reg = regexp.MustCompile(`0?(\d{3})-(\d{4})-(\d{4})`)
-	str = reg.ReplaceAllString(str, "$1$2$3")
+	reg = regexp.MustCompile(`0?(\d{3})-(\d{4})-(\d{4})([-_]\d{2,})`)
+	str = reg.ReplaceAllString(str, "$1$2$3$4")
 
 	//4. 提取中国境内身份证号码
 	reg = regexp.MustCompile(`(?i)\d{18}|\d{17}X`)
@@ -44,8 +44,8 @@ func Decompose(info *Address, str string) *Address {
 	str = strings.Replace(str, IdNumber, "", -1)
 	info.IdNumber = strings.ToUpper(IdNumber)
 
-	//5. 提取11位手机号码或者7位以上座机号
-	reg = regexp.MustCompile(`\d{7,11}|\d{3,4}-\d{6,8}`)
+	//5. 提取11位手机号码或者7位以上座机号，支持虚拟号的提取
+	reg = regexp.MustCompile(`\d{7,11}[\-_]\d{2,6}|\d{7,11}|\d{3,4}-\d{6,8}`)
 	mobile := reg.FindString(str)
 	str = strings.Replace(str, mobile, "", -1)
 	info.Mobile = mobile
