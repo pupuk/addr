@@ -122,7 +122,7 @@ I:
 		} else if ok {
 			for _, r2 := range r1 {
 				address.Region = r2.Name
-				address.PostCode = strconv.Itoa(r1[0].Zipcode)
+				address.PostCode = strconv.Itoa(r2.Zipcode)
 				getAddressById(address, r2.Pid, city)
 				for _, v := range cArr {
 					if address.City == v {
