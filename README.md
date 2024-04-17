@@ -18,6 +18,9 @@ Go语言版本采用hash map索引检索模式，对关键词进行匹配，将�
 ### 1.3 特别感谢
  因为工作繁忙，没有时间重头到尾来实现go语言的版本，在关键点的解析省、市、区的部分以及最后的梳理校订，[cxy-chenxuanyu](https://github.com/cxy-chenxuanyu)同学贡献了智慧和代码，再次特别感谢，欢迎围观。
 
+### 1.4 Star History
+[![Star History Chart](https://api.star-history.com/svg?repos=pupuk/addr&type=Date)](https://star-history.com/#pupuk/addr&Date)
+
 ## 2. 使用说明
 
 ```
