@@ -3,14 +3,14 @@ package addr
 import (
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
+	"os"
 	"strings"
 	"testing"
 	"time"
 )
 
 func TestSmart(t *testing.T) {
-	data, err := ioutil.ReadFile("data/test")
+	data, err := os.ReadFile("data/test")
 	if err != nil {
 		fmt.Println("读取test文件失败，请检查文件！---", err)
 		return

@@ -4,7 +4,6 @@ import (
 	"bufio"
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
 	"os"
 	"reflect"
 	"sort"
@@ -44,7 +43,7 @@ var ranks = []string{"city", "province", "region"}
 // AutoAreaMap 自动生成行政区划map
 func AutoAreaMap() {
 	for _, rank := range ranks {
-		data, err := ioutil.ReadFile(filePath + rank)
+		data, err := os.ReadFile(filePath + rank)
 		if err != nil {
 			fmt.Println("读取json文件失败,行政等级为："+rank+"，请检查文件！---", err)
 			return
@@ -202,9 +201,15 @@ func AutoAreaMap() {
 		//写入文件时，使用带缓存的 *Writer
 		write := bufio.NewWriter(file)
 		_, err = write.WriteString(str)
+		if err != nil {
+			fmt.Println("写入文件失败", err)
+		}
 
 		//Flush将缓存的文件真正写入到文件中
 		err = write.Flush()
+		if err != nil {
+			fmt.Println("Flush失败", err)
+		}
 
 		//及时关闭file句柄
 		func(file *os.File) {
