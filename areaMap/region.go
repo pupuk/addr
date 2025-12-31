@@ -3133,7 +3133,7 @@ var RegionById = map[int]RegionId{
 	5252: {Name: "沔城镇", Pid: 271, Zipcode: 433000},
 	5253: {Name: "通海口镇", Pid: 271, Zipcode: 433000},
 	5254: {Name: "陈场镇", Pid: 271, Zipcode: 433000},
-	5255: {Name: "工业园区", Pid: 271, Zipcode: 433000},
+	5255: {Name: "仙桃工业园区", Pid: 271, Zipcode: 433000},
 	5256: {Name: "九合垸原种场", Pid: 271, Zipcode: 433000},
 	5257: {Name: "沙湖原种场", Pid: 271, Zipcode: 433000},
 	5258: {Name: "排湖渔场", Pid: 271, Zipcode: 433000},
@@ -3485,7 +3485,7 @@ var RegionById = map[int]RegionId{
 }
 
 var RegionByPid = map[int][]RegionPid{
-	271:  {{Name: "仙桃市", Id: 2910, Zipcode: 433000}, {Name: "郑场镇", Id: 5240, Zipcode: 433000}, {Name: "毛嘴镇", Id: 5241, Zipcode: 433000}, {Name: "豆河镇", Id: 5242, Zipcode: 433000}, {Name: "三伏潭镇", Id: 5243, Zipcode: 433000}, {Name: "胡场镇", Id: 5244, Zipcode: 433000}, {Name: "长埫口镇", Id: 5245, Zipcode: 433000}, {Name: "西流河镇", Id: 5246, Zipcode: 433000}, {Name: "沙湖镇", Id: 5247, Zipcode: 433000}, {Name: "杨林尾镇", Id: 5248, Zipcode: 433000}, {Name: "彭场镇", Id: 5249, Zipcode: 433000}, {Name: "张沟镇", Id: 5250, Zipcode: 433000}, {Name: "郭河镇", Id: 5251, Zipcode: 433000}, {Name: "沔城镇", Id: 5252, Zipcode: 433000}, {Name: "通海口镇", Id: 5253, Zipcode: 433000}, {Name: "陈场镇", Id: 5254, Zipcode: 433000}, {Name: "工业园区", Id: 5255, Zipcode: 433000}, {Name: "九合垸原种场", Id: 5256, Zipcode: 433000}, {Name: "沙湖原种场", Id: 5257, Zipcode: 433000}, {Name: "排湖渔场", Id: 5258, Zipcode: 433000}, {Name: "五湖渔场", Id: 5259, Zipcode: 433000}, {Name: "赵西垸林场", Id: 5260, Zipcode: 433000}, {Name: "刘家垸林场", Id: 5261, Zipcode: 433000}, {Name: "畜禽良种场", Id: 5262, Zipcode: 433000}, {Name: "城区", Id: 5263, Zipcode: 433000}},
+	271:  {{Name: "仙桃市", Id: 2910, Zipcode: 433000}, {Name: "郑场镇", Id: 5240, Zipcode: 433000}, {Name: "毛嘴镇", Id: 5241, Zipcode: 433000}, {Name: "豆河镇", Id: 5242, Zipcode: 433000}, {Name: "三伏潭镇", Id: 5243, Zipcode: 433000}, {Name: "胡场镇", Id: 5244, Zipcode: 433000}, {Name: "长埫口镇", Id: 5245, Zipcode: 433000}, {Name: "西流河镇", Id: 5246, Zipcode: 433000}, {Name: "沙湖镇", Id: 5247, Zipcode: 433000}, {Name: "杨林尾镇", Id: 5248, Zipcode: 433000}, {Name: "彭场镇", Id: 5249, Zipcode: 433000}, {Name: "张沟镇", Id: 5250, Zipcode: 433000}, {Name: "郭河镇", Id: 5251, Zipcode: 433000}, {Name: "沔城镇", Id: 5252, Zipcode: 433000}, {Name: "通海口镇", Id: 5253, Zipcode: 433000}, {Name: "陈场镇", Id: 5254, Zipcode: 433000}, {Name: "仙桃工业园区", Id: 5255, Zipcode: 433000}, {Name: "九合垸原种场", Id: 5256, Zipcode: 433000}, {Name: "沙湖原种场", Id: 5257, Zipcode: 433000}, {Name: "排湖渔场", Id: 5258, Zipcode: 433000}, {Name: "五湖渔场", Id: 5259, Zipcode: 433000}, {Name: "赵西垸林场", Id: 5260, Zipcode: 433000}, {Name: "刘家垸林场", Id: 5261, Zipcode: 433000}, {Name: "畜禽良种场", Id: 5262, Zipcode: 433000}, {Name: "城区", Id: 5263, Zipcode: 433000}},
 	320:  {{Name: "八步区", Id: 3240, Zipcode: 542800}, {Name: "富川瑶族自治县", Id: 3241, Zipcode: 542700}, {Name: "昭平县", Id: 3242, Zipcode: 542800}, {Name: "钟山县", Id: 3243, Zipcode: 542800}, {Name: "平桂管理区", Id: 5053, Zipcode: 542800}},
 	401:  {{Name: "南江县", Id: 4335, Zipcode: 636600}, {Name: "巴州区", Id: 4336, Zipcode: 636600}, {Name: "平昌县", Id: 4337, Zipcode: 636600}, {Name: "通江县", Id: 4338, Zipcode: 636600}, {Name: "恩阳区", Id: 5337, Zipcode: 636600}},
 	468:  {{Name: "囊谦县", Id: 4892, Zipcode: 815000}, {Name: "曲麻莱县", Id: 4893, Zipcode: 815000}, {Name: "杂多县", Id: 4894, Zipcode: 815000}, {Name: "治多县", Id: 4895, Zipcode: 815000}, {Name: "玉树县", Id: 4896, Zipcode: 815000}, {Name: "称多县", Id: 4897, Zipcode: 815000}},
@@ -4619,7 +4619,7 @@ var RegionByName = map[string][]RegionName{
 	"镇康县":         {{Name: "镇康县", Id: 4538, Pid: 422, Zipcode: 677000}},
 	"高台县":         {{Name: "高台县", Id: 4805, Pid: 454, Zipcode: 734000}},
 	"阆中市":         {{Name: "阆中市", Id: 4296, Pid: 395, Zipcode: 637000}},
-	"工业园区":        {{Name: "工业园区", Id: 5255, Pid: 271, Zipcode: 433000}},
+	"工业园区":        {{Name: "仙桃工业园区", Id: 5255, Pid: 271, Zipcode: 433000}},
 	"韩国":          {{Name: "韩国", Id: 556, Pid: 35, Zipcode: 0}},
 	"四方台区":        {{Name: "四方台区", Id: 1731, Pid: 134, Zipcode: 155100}},
 	"提蒙乡":         {{Name: "提蒙乡", Id: 5548, Pid: 339, Zipcode: 572400}},
